@@ -231,7 +231,7 @@
         }
 
         .contact-container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -271,6 +271,8 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .social-link {
@@ -284,6 +286,8 @@
             border-radius: 4px;
             transition: background 0.3s;
             font-size: 0.9rem;
+            min-width: 120px;
+            justify-content: center;
         }
 
         .social-link:hover {
@@ -318,6 +322,24 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .social-link {
+                min-width: auto;
+                padding: 8px 10px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .social-links {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
